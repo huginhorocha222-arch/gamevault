@@ -1,0 +1,26 @@
+# Credenciais reais (nunca versionar)
+.env
+.env.local
+.env.*.local
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporários e logs
+*.log
+*.tmp
+*.bak
+/tmp/
+/cache/
+
+# Dependências (caso use Composer/NPM futuramente)
+/vendor/
+/node_modules/
