@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-/* ---------- Ações do carrinho (POST → redirect, padrão PRG) ---------- */
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     verify_csrf();
 
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-/* ---------- Exibição ---------- */
+
 $dados = cart_items();
 $items = $dados['items'];
 $total = $dados['total'];
