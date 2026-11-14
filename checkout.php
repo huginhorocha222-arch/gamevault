@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-// Compra restrita a usuários autenticados
+
 require_login();
 
 $dados = cart_items();
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!in_array($forma, ['pix', 'boleto', 'cartao'], true)) {
         $erro = 'Selecione uma forma de pagamento.';
     } elseif ($forma === 'cartao') {
-        // Simulação: apenas valida o preenchimento básico dos campos do cartão
+       
         $numero = preg_replace('/\D/', '', (string) ($_POST['cartao_numero'] ?? ''));
         $titular = trim((string) ($_POST['cartao_nome'] ?? ''));
         $validade = trim((string) ($_POST['cartao_validade'] ?? ''));
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             redirect(url('pedido.php?id=' . $pedidoId));
         } catch (RuntimeException $e) {
             $erro = $e->getMessage();
-            $dados = cart_items(); // recarrega quantidades ajustadas
+            $dados = cart_items();
         }
     }
 }
