@@ -14,7 +14,7 @@ $estoque    = (int) $produto['estoque'];
 $semEstoque = $estoque <= 0;
 $noCarrinho = cart()[$id] ?? 0;
 
-// Produtos relacionados (mesma categoria)
+
 $relacionados = array_values(array_filter(
     produtos_listar((int) $produto['categoria_id'], null, true),
     fn($p) => (int) $p['id'] !== $id
