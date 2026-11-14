@@ -1,0 +1,58 @@
+/* GameVault - estilos próprios (complementam o Bootstrap) */
+
+body {
+  background-color: #f3f4f8;
+}
+
+.gv-navbar {
+  border-bottom: 3px solid #0dcaf0;
+}
+
+.gv-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+}
+
+.gv-hero-icon {
+  font-size: 11rem;
+  color: rgba(13, 202, 240, 0.85);
+  filter: drop-shadow(0 10px 30px rgba(13, 202, 240, 0.35));
+}
+
+.gv-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gv-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.gv-card .card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.gv-product-img img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.gv-cart-thumb {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.gv-qty-group input[type="number"]::-webkit-inner-spin-button,
+.gv-qty-group input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gv-qty-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}
